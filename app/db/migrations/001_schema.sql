@@ -179,3 +179,41 @@ CREATE POLICY documents_user_isolation ON generated_documents
 -- (e.g. "who is this user, what company are they in") to bootstrap the session
 -- variables above. The agent's SQL tool should never have direct access to
 -- the users table at all (enforce this at the tool layer, not just RLS).
+-- ============================================================
+-- FORCE RLS even for the table owner
+-- ============================================================
+-- By default, PostgreSQL exempts the TABLE OWNER from its own RLS policies.
+-- Since this migration runs as the database's default/owner role, every
+-- policy above would be silently bypassed for that role without this.
+-- FORCE makes the owner subject to RLS too (still not a fix for superusers
+-- — see note below).
+
+ALTER TABLE plants FORCE ROW LEVEL SECURITY;
+ALTER TABLE elements FORCE ROW LEVEL SECURITY;
+ALTER TABLE datasources FORCE ROW LEVEL SECURITY;
+ALTER TABLE datapoints FORCE ROW LEVEL SECURITY;
+ALTER TABLE hourly_market_prices FORCE ROW LEVEL SECURITY;
+ALTER TABLE monthly_costs FORCE ROW LEVEL SECURITY;
+ALTER TABLE chat_sessions FORCE ROW LEVEL SECURITY;
+ALTER TABLE agent_runs FORCE ROW LEVEL SECURITY;
+ALTER TABLE generated_documents FORCE ROW LEVEL SECURITY;
+
+-- ============================================================
+-- REQUIRED: a non-superuser application role
+-- ============================================================
+-- PostgreSQL superusers bypass Row Level Security entirely, by design,
+-- regardless of FORCE ROW LEVEL SECURITY. Managed Postgres providers
+-- (Railway included) give you a superuser by default for administration.
+-- That role must NEVER be used by the application itself, or every
+-- isolation guarantee above is silently void.
+--
+-- Run this once per database (manually, or as a deploy step), then point
+-- the app's DATABASE_URL at app_user, not the default superuser role.
+-- Verified manually: connecting as the default superuser returned rows
+-- from every company regardless of session variables; connecting as
+-- app_user correctly returned only the active company's rows.
+
+CREATE ROLE app_user WITH LOGIN PASSWORD 'CHANGE_ME_BEFORE_DEPLOY';
+GRANT CONNECT ON DATABASE railway TO app_user;
+GRANT USAGE ON SCHEMA public TO app_user;
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO app_user;
