@@ -1,0 +1,1 @@
+-- Schema to be provided by the user.
