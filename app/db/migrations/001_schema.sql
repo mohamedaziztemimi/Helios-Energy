@@ -94,6 +94,9 @@ CREATE TABLE agent_runs (
     status      TEXT NOT NULL DEFAULT 'running',  -- running | completed | failed
     input       TEXT NOT NULL,
     output      TEXT NOT NULL DEFAULT '',
+    final_text  TEXT,  -- the agent's final natural-language answer, extracted
+                        -- from the trace for clean display in the chat UI
+                        -- (separate from `output`, which is the full technical trace)
     error       TEXT,
     created_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
     updated_at  TIMESTAMPTZ NOT NULL DEFAULT now()

@@ -558,8 +558,8 @@
                   <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;color:#8b94a3;text-transform:uppercase;">Analyst Agent</span>
                 </div>
 
-                <button onclick="{{ m.toggle }}" style="display:flex;align-items:center;gap:8px;background:none;border:none;color:#5a6371;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.07em;cursor:pointer;padding:0 0 11px;text-transform:uppercase;" style-hover="{color:'#8b94a3'}">
-                  <span style="color:#5fd08a;">✓</span>{{ m.caret }} trace · {{ m.traceCount }} steps · {{ m.traceTime }}
+                <button onclick="{{ m.toggle }}" type="button" style="display:inline-flex;align-items:center;gap:9px;background:#14181f;border:1px solid #232a33;border-radius:8px;color:#8b94a3;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.07em;cursor:pointer;padding:8px 14px;margin-bottom:11px;text-transform:uppercase;" style-hover="{color:'#e6e9ee',borderColor:'#3a434f',background:'#171c25'}">
+                  <span style="color:#5fd08a;">✓</span><span>{{ m.caret }} {{ m.toggleLabel }} · {{ m.traceCount }} steps · {{ m.traceTime }}</span>
                 </button>
 
                 <sc-if value="{{ m.traceOpen }}" hint-placeholder-val="{{ false }}">
