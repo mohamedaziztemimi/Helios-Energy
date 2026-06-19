@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="4fd2d8ea-03bd-494d-991f-52a744d05081"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("dfcb94dc-ae45-4a8f-be29-cfbc6db3ad43") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("498137cc-c9e4-49ae-bbd3-2890f09fa23a") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("0b2a9df4-d287-41c8-9fa0-ed79d2b9497e") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("0a0c61f2-0f80-40a8-8eac-c0eec42a6141") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("beb1fa71-14a6-49bf-8cfb-d92a551bdd3d") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("8b3ecd49-45eb-4eba-9ecd-6cbb3a1216f1") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("f18e01bb-5c35-4dc9-b1cf-10130ea73591") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("0c13a110-cc4b-4c42-a3ba-83c1ee303cc3") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("19c3b833-51ae-4ba0-a092-e2b8e5ac907a") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("f0a2591d-87f8-4f7a-b7cb-0c7fb778680e") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("5e552e8a-5087-4727-b6c3-620dbf356100") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("90c450b1-a4ba-442c-9cdb-ffab371e4731") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("42605452-ae83-41a6-9085-7cd81d901c91") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("61949c7e-8645-47da-aca1-5d653e75c9c3") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("91c5a977-fe0d-4a7a-83c8-08435c44d320") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("d3f3a332-9b98-4417-a425-62300542def7") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("3b3063a5-05e4-4736-8e80-a8c4e88ea5b8") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("09454f83-91ff-45f2-af5c-c8287dd03150") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("df7f394b-82a4-41ac-8f2c-441cd679565a") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("5a9b8560-db11-4623-bc33-ea89b4ef84f6") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("a04eae0c-7854-483b-a43f-3d1011b3cac7") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("d3f3a332-9b98-4417-a425-62300542def7") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("3b3063a5-05e4-4736-8e80-a8c4e88ea5b8") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("09454f83-91ff-45f2-af5c-c8287dd03150") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("df7f394b-82a4-41ac-8f2c-441cd679565a") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("5a9b8560-db11-4623-bc33-ea89b4ef84f6") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("a04eae0c-7854-483b-a43f-3d1011b3cac7") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("d3f3a332-9b98-4417-a425-62300542def7") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("3b3063a5-05e4-4736-8e80-a8c4e88ea5b8") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("09454f83-91ff-45f2-af5c-c8287dd03150") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("df7f394b-82a4-41ac-8f2c-441cd679565a") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("5a9b8560-db11-4623-bc33-ea89b4ef84f6") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("a04eae0c-7854-483b-a43f-3d1011b3cac7") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("d3f3a332-9b98-4417-a425-62300542def7") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("3b3063a5-05e4-4736-8e80-a8c4e88ea5b8") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("09454f83-91ff-45f2-af5c-c8287dd03150") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("df7f394b-82a4-41ac-8f2c-441cd679565a") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("5a9b8560-db11-4623-bc33-ea89b4ef84f6") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("a04eae0c-7854-483b-a43f-3d1011b3cac7") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+  *{box-sizing:border-box;}
+  ::selection{background:#f5a62340;}
+  ::-webkit-scrollbar{width:10px;height:10px;}
+  ::-webkit-scrollbar-track{background:transparent;}
+  ::-webkit-scrollbar-thumb{background:#232a33;border-radius:6px;border:2px solid #0d1015;}
+  ::-webkit-scrollbar-thumb:hover{background:#2e3742;}
+  @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+  @keyframes lineIn{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
+  @keyframes msgIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @keyframes dotPulse{0%,100%{opacity:1;box-shadow:0 0 0 0 #f5a62355}70%{opacity:.55;box-shadow:0 0 0 5px #f5a62300}}
+  @keyframes toastIn{from{opacity:0;transform:translate(-50%,12px)}to{opacity:1;transform:translate(-50%,0)}}
+  textarea,input,button{font-family:inherit;}
+  textarea::placeholder{color:#5a6371;}
+  textarea{scrollbar-width:thin;}
+</style>
+</helmet>
+
+<div style="width:100%;height:100vh;background:#0d1015;color:#e6e9ee;font-family:'IBM Plex Sans',-apple-system,'Segoe UI',sans-serif;overflow:hidden;position:relative;">
+
+  <!-- ============ ACCESS-KEY GATE ============ -->
+  <sc-if value="{{ isGate }}" hint-placeholder-val="{{ true }}">
+  <div style="height:100vh;overflow:auto;display:flex;align-items:center;justify-content:center;padding:48px 32px;background:radial-gradient(1200px 620px at 50% -12%, #161c24 0%, #0d1015 58%);">
+    <div style="width:100%;max-width:460px;">
+
+      <div style="display:flex;align-items:center;gap:13px;margin-bottom:6px;">
+        <div style="width:30px;height:30px;border-radius:8px;background:linear-gradient(150deg,#ffc14d,#f5a623);display:flex;align-items:center;justify-content:center;">
+          <div style="width:11px;height:11px;border-radius:50%;background:#1a1205;"></div>
+        </div>
+        <div style="font-size:19px;font-weight:600;letter-spacing:.01em;">SOLARIS <span style="color:#5a6371;font-weight:400;">/ Plant Analyst</span></div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;color:#5a6371;margin-bottom:42px;padding-left:43px;">multi-tenant energy intelligence · agent console</div>
+
+      <div style="font-size:13px;font-weight:600;letter-spacing:.16em;color:#8b94a3;text-transform:uppercase;margin-bottom:14px;">Access key required</div>
+      <div style="font-size:14px;line-height:1.65;color:#aeb6c2;margin-bottom:24px;">This is a private hiring demo. Enter the access key you were given to continue.</div>
+
+      <input type="password" value="{{ gateInput }}" oninput="{{ onGateInput }}" onkeydown="{{ onGateKey }}" placeholder="access key" autofocus="autofocus"
+        style="width:100%;background:#14181f;border:1px solid #232a33;border-radius:11px;padding:15px 16px;color:#e6e9ee;font-family:'IBM Plex Mono',monospace;font-size:14px;letter-spacing:.04em;outline:none;margin-bottom:14px;">
+
+      <sc-if value="{{ hasGateError }}" hint-placeholder-val="{{ false }}">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#f0716a;margin-bottom:14px;display:flex;align-items:center;gap:8px;">
+        <span>✕</span><span>{{ gateError }}</span>
+      </div>
+      </sc-if>
+
+      <button onclick="{{ unlock }}" disabled="{{ gateDisabled }}" style="width:100%;background:{{ gateBg }};border:none;border-radius:11px;padding:14px 16px;cursor:{{ gateCursor }};color:#1a1205;font-weight:600;font-size:14px;opacity:{{ gateOpacity }};">{{ gateLabel }}</button>
+
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:#4a525e;margin-top:22px;text-align:center;">restricted · validated server-side</div>
+
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ============ LOGIN ============ -->
+  <sc-if value="{{ isLogin }}" hint-placeholder-val="{{ true }}">
+  <div style="height:100vh;overflow:auto;display:flex;align-items:center;justify-content:center;padding:48px 32px;background:radial-gradient(1200px 620px at 50% -12%, #161c24 0%, #0d1015 58%);">
+    <div style="width:100%;max-width:880px;">
+
+      <div style="display:flex;align-items:center;gap:13px;margin-bottom:6px;">
+        <div style="width:30px;height:30px;border-radius:8px;background:linear-gradient(150deg,#ffc14d,#f5a623);display:flex;align-items:center;justify-content:center;">
+          <div style="width:11px;height:11px;border-radius:50%;background:#1a1205;"></div>
+        </div>
+        <div style="font-size:19px;font-weight:600;letter-spacing:.01em;">SOLARIS <span style="color:#5a6371;font-weight:400;">/ Plant Analyst</span></div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;color:#5a6371;margin-bottom:40px;padding-left:43px;">multi-tenant energy intelligence · agent console</div>
+
+      <div style="font-size:13px;font-weight:600;letter-spacing:.16em;color:#8b94a3;text-transform:uppercase;margin-bottom:18px;">Select a demo identity</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;">
+        <sc-for list="{{ companyGroups }}" as="g" hint-placeholder-count="2">
+          <div>
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:13px;">
+              <div style="width:6px;height:6px;border-radius:50%;background:#f5a623;"></div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:#aeb6c2;text-transform:uppercase;">{{ g.name }}</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:11px;">
+              <sc-for list="{{ g.users }}" as="u" hint-placeholder-count="2">
+                <button onclick="{{ u.pick }}" style="display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:#14181f;border:1px solid #232a33;border-radius:11px;padding:15px 16px;cursor:pointer;transition:border-color .15s,background .15s;" style-hover="{borderColor:'#f5a62366',background:'#171c25'}">
+                  <div style="width:42px;height:42px;border-radius:10px;background:#0f1319;border:1px solid #2a323c;display:flex;align-items:center;justify-content:center;flex:none;font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:#f5a623;">{{ u.initials }}</div>
+                  <div style="flex:1;min-width:0;">
+                    <div style="font-size:13.5px;font-weight:600;color:#e6e9ee;">{{ u.name }}</div>
+                    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6b7480;margin:2px 0 8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{{ u.email }}</div>
+                    <div style="display:flex;gap:7px;flex-wrap:wrap;">
+                      <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.08em;color:#8b94a3;background:#1c222b;border:1px solid #2a323c;border-radius:5px;padding:3px 7px;">{{ u.roleLabel }}</span>
+                      <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.08em;border-radius:5px;padding:3px 7px;color:{{ u.accessColor }};background:{{ u.accessBg }};border:1px solid {{ u.accessBorder }};">{{ u.accessLabel }}</span>
+                    </div>
+                  </div>
+                  <div style="color:#f5a623;font-size:16px;flex:none;">→</div>
+                </button>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="margin-top:36px;display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#4a525e;">
+        <div style="width:5px;height:5px;border-radius:50%;background:#5fd08a;"></div>
+        demo environment · no password required · access scopes are enforced per identity
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ============ APP ============ -->
+  <sc-if value="{{ isApp }}" hint-placeholder-val="{{ false }}">
+  <div style="height:100vh;display:flex;flex-direction:column;">
+
+    <!-- header -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:0 22px;height:60px;border-bottom:1px solid #1b212a;background:#0c0f14;flex:none;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div style="width:26px;height:26px;border-radius:7px;background:linear-gradient(150deg,#ffc14d,#f5a623);display:flex;align-items:center;justify-content:center;">
+          <div style="width:9px;height:9px;border-radius:50%;background:#1a1205;"></div>
+        </div>
+        <div style="font-size:15px;font-weight:600;">SOLARIS <span style="color:#5a6371;font-weight:400;">/ Plant Analyst</span></div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#5a6371;border-left:1px solid #232a33;padding-left:12px;margin-left:4px;">{{ companyName }}</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div style="text-align:right;line-height:1.3;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#cfd5de;">{{ userEmail }}</div>
+          <div style="display:flex;gap:6px;justify-content:flex-end;margin-top:3px;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.08em;color:#8b94a3;background:#1c222b;border:1px solid #2a323c;border-radius:4px;padding:2px 6px;">{{ userRole }}</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.08em;border-radius:4px;padding:2px 6px;color:{{ userAccessColor }};background:{{ userAccessBg }};border:1px solid {{ userAccessBorder }};">{{ userAccessLabel }}</span>
+          </div>
+        </div>
+        <div style="width:34px;height:34px;border-radius:9px;background:#0f1319;border:1px solid #2a323c;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;color:#f5a623;">{{ userInitials }}</div>
+        <button onclick="{{ switchUser }}" style="background:#14181f;border:1px solid #232a33;border-radius:8px;padding:8px 13px;cursor:pointer;color:#aeb6c2;font-size:12.5px;font-weight:500;" style-hover="{borderColor:'#3a434f',color:'#e6e9ee'}">Switch user</button>
+      </div>
+    </div>
+
+    <!-- body -->
+    <div style="flex:1;display:grid;grid-template-columns:minmax(0,1fr);min-height:0;">
+
+      <!-- plants rail -->
+      
+
+      <!-- chat column -->
+      <div style="display:flex;flex-direction:column;min-height:0;min-width:0;">
+
+        <div ref="{{ setScrollRef }}" style="flex:1;overflow:auto;">
+          <div style="max-width:840px;margin:0 auto;padding:30px 30px 18px;display:flex;flex-direction:column;gap:24px;">
+
+            <!-- empty state -->
+            <sc-if value="{{ showEmpty }}" hint-placeholder-val="{{ true }}">
+            <div style="padding:48px 0 20px;">
+              <div style="font-size:23px;font-weight:600;color:#e6e9ee;letter-spacing:-.01em;">Ask the analyst.</div>
+              <div style="font-size:14.5px;color:#8b94a3;margin-top:9px;line-height:1.6;max-width:560px;">Query production, performance, costs, and incidents in natural language. The agent runs against your plant data and returns sourced answers with downloadable reports. Responses respect your access scope.</div>
+              <div style="margin-top:26px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#5a6371;text-transform:uppercase;margin-bottom:12px;">Try</div>
+              <div style="display:flex;flex-direction:column;gap:9px;">
+                <sc-for list="{{ suggestions }}" as="s" hint-placeholder-count="4">
+                  <button onclick="{{ s.ask }}" style="text-align:left;background:#14181f;border:1px solid #232a33;border-radius:10px;padding:13px 15px;cursor:pointer;font-size:13.5px;color:#cfd5de;line-height:1.45;display:flex;gap:11px;align-items:center;" style-hover="{borderColor:'#f5a62355',background:'#171c25'}">
+                    <span style="color:#f5a623;font-family:'IBM Plex Mono',monospace;flex:none;">›</span>{{ s.text }}
+                  </button>
+                </sc-for>
+              </div>
+            </div>
+            </sc-if>
+
+            <!-- messages -->
+            <sc-for list="{{ msgs }}" as="m" hint-placeholder-count="0">
+
+              <sc-if value="{{ m.isUser }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;justify-content:flex-end;animation:msgIn .25s ease-out;">
+                <div style="max-width:80%;background:#1b222c;border:1px solid #2a323c;border-radius:14px 14px 4px 14px;padding:12px 16px;font-size:14.5px;line-height:1.55;color:#e6e9ee;">{{ m.text }}</div>
+              </div>
+              </sc-if>
+
+              <sc-if value="{{ m.isAgent }}" hint-placeholder-val="{{ false }}">
+              <div style="animation:msgIn .25s ease-out;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:11px;">
+                  <span style="width:7px;height:7px;border-radius:50%;background:#f5a623;display:block;"></span>
+                  <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;color:#8b94a3;text-transform:uppercase;">Analyst Agent</span>
+                </div>
+
+                <button onclick="{{ m.toggle }}" style="display:flex;align-items:center;gap:8px;background:none;border:none;color:#5a6371;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.07em;cursor:pointer;padding:0 0 11px;text-transform:uppercase;" style-hover="{color:'#8b94a3'}">
+                  <span style="color:#5fd08a;">✓</span>{{ m.caret }} trace · {{ m.traceCount }} steps · {{ m.traceTime }}
+                </button>
+
+                <sc-if value="{{ m.traceOpen }}" hint-placeholder-val="{{ false }}">
+                <div style="background:#0a0c10;border:1px solid #1d242d;border-radius:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.65;padding:12px 14px;margin-bottom:16px;overflow-x:auto;">
+                  <sc-for list="{{ m.trace }}" as="line" hint-placeholder-count="0">
+                    <div style="display:flex;gap:11px;padding-left:{{ line.pad }};">
+                      <span style="color:#3a424d;flex:none;">{{ line.t }}</span>
+                      <span style="color:{{ line.color }};flex:none;width:14px;">{{ line.glyph }}</span>
+                      <span style="color:{{ line.textColor }};white-space:pre-wrap;word-break:break-word;">{{ line.text }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+                </sc-if>
+
+                <div style="font-size:15px;line-height:1.68;color:#cfd5de;max-width:660px;text-wrap:pretty;">{{ m.answer }}</div>
+
+                <sc-if value="{{ m.hasNotice }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;gap:10px;margin-top:14px;border:1px solid #574818;background:#f5a6230d;border-radius:9px;padding:11px 14px;max-width:620px;">
+                  <span style="color:#f5a623;flex:none;font-size:13px;">⚠</span>
+                  <span style="font-size:13px;line-height:1.55;color:#c4a566;">{{ m.notice }}</span>
+                </div>
+                </sc-if>
+
+                <sc-if value="{{ m.hasMetrics }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;">
+                  <sc-for list="{{ m.metrics }}" as="mt" hint-placeholder-count="0">
+                    <div style="background:#0f1319;border:1px solid #232a33;border-radius:9px;padding:10px 14px;min-width:104px;">
+                      <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.07em;color:#5a6371;text-transform:uppercase;">{{ mt.label }}</div>
+                      <div style="font-size:18px;font-weight:600;margin-top:4px;color:{{ mt.color }};">{{ mt.value }}</div>
+                    </div>
+                  </sc-for>
+                </div>
+                </sc-if>
+
+                <sc-if value="{{ m.hasFiles }}" hint-placeholder-val="{{ false }}">
+                <div style="margin-top:16px;display:flex;flex-direction:column;gap:9px;max-width:620px;">
+                  <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#8b94a3;text-transform:uppercase;">Generated artifacts</div>
+                  <sc-for list="{{ m.files }}" as="f" hint-placeholder-count="1">
+                    <div onclick="{{ f.onClick }}" role="button" tabindex="0" style="display:flex;align-items:center;gap:12px;background:#0f1319;border:1px solid {{ f.borderColor }};border-radius:11px;padding:13px 15px;cursor:pointer;transition:background .15s,border-color .15s;" style-hover="{background:'#131822',borderColor:'#3a434f'}">
+                      <div style="width:38px;height:38px;border-radius:9px;background:{{ f.bgColor }};border:1px solid {{ f.borderColor }};display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:700;color:{{ f.color }};letter-spacing:.06em;flex:none;">{{ f.label }}</div>
+                      <div style="flex:1;min-width:0;">
+                        <div style="font-size:13.5px;font-weight:600;color:#e6e9ee;">Report generated · {{ f.name }}</div>
+                        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#6b7480;margin-top:3px;word-break:break-all;">{{ f.path }}</div>
+                      </div>
+                      <span style="display:flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:{{ f.color }};text-transform:uppercase;flex:none;"><span style="font-size:13px;line-height:1;">↓</span>download</span>
+                    </div>
+                  </sc-for>
+                </div>
+                </sc-if>
+
+                <sc-if value="{{ m.hasReport }}" hint-placeholder-val="{{ false }}">
+                <div style="margin-top:18px;border:1px solid #2a323c;border-radius:12px;background:#0f1319;overflow:hidden;max-width:580px;">
+                  <div style="display:flex;gap:13px;align-items:center;padding:15px 16px 14px;border-bottom:1px solid #1b212a;">
+                    <div style="width:38px;height:38px;border-radius:9px;background:#f5a6231a;border:1px solid #f5a62333;display:flex;align-items:center;justify-content:center;flex:none;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;color:#f5a623;letter-spacing:.05em;">RPT</div>
+                    <div style="flex:1;min-width:0;">
+                      <div style="font-size:14px;font-weight:600;color:#e6e9ee;">{{ m.report.title }}</div>
+                      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5a6371;margin-top:3px;">{{ m.report.meta }}</div>
+                    </div>
+                    <span style="display:flex;align-items:center;gap:5px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;color:#5fd08a;text-transform:uppercase;flex:none;"><span style="width:6px;height:6px;border-radius:50%;background:#5fd08a;"></span>ready</span>
+                  </div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 16px;flex-wrap:wrap;">
+                    <div style="display:flex;gap:8px;">
+                      <sc-for list="{{ m.report.fmts }}" as="f" hint-placeholder-count="3">
+                        <button onclick="{{ f.onClick }}" style="display:flex;align-items:center;gap:8px;background:#14181f;border:1px solid #232a33;border-radius:7px;padding:7px 12px;cursor:pointer;" style-hover="{borderColor:'#3a434f'}">
+                          <span style="width:9px;height:11px;border-radius:2px;background:{{ f.color }};display:block;flex:none;"></span>
+                          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#aeb6c2;letter-spacing:.04em;">{{ f.label }}</span>
+                        </button>
+                      </sc-for>
+                    </div>
+                    <button onclick="{{ m.report.onDownload }}" style="display:flex;align-items:center;gap:8px;background:#f5a623;border:none;border-radius:8px;padding:9px 17px;cursor:pointer;color:#1a1205;font-weight:600;font-size:13px;" style-hover="{background:'#ffc14d'}">↓ Download</button>
+                  </div>
+                </div>
+                </sc-if>
+              </div>
+              </sc-if>
+
+            </sc-for>
+
+            <!-- live agent trace -->
+            <sc-if value="{{ running }}" hint-placeholder-val="{{ false }}">
+            <div style="animation:msgIn .25s ease-out;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:11px;">
+                <span style="width:7px;height:7px;border-radius:50%;background:#f5a623;display:block;"></span>
+                <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;color:#8b94a3;text-transform:uppercase;">Analyst Agent</span>
+              </div>
+              <div style="background:#0a0c10;border:1px solid #f5a62340;border-radius:11px;font-family:'IBM Plex Mono',monospace;overflow:hidden;box-shadow:0 0 0 1px #f5a6230d,0 14px 40px -18px #000;">
+                <div style="display:flex;align-items:center;justify-content:space-between;padding:9px 14px;border-bottom:1px solid #1d242d;background:#0c0f15;">
+                  <div style="display:flex;align-items:center;gap:9px;">
+                    <span style="width:7px;height:7px;border-radius:50%;background:#f5a623;animation:dotPulse 1.3s infinite;"></span>
+                    <span style="font-size:10.5px;letter-spacing:.16em;color:#aeb6c2;text-transform:uppercase;">Agent Trace</span>
+                    <span style="font-size:10.5px;letter-spacing:.1em;color:#f5a623;text-transform:uppercase;">· running</span>
+                  </div>
+                  <span style="font-size:11px;color:#5a6371;">{{ liveElapsed }}</span>
+                </div>
+                <div style="padding:12px 14px;font-size:12px;line-height:1.65;overflow-x:auto;">
+                  <sc-for list="{{ liveTrace }}" as="line" hint-placeholder-count="0">
+                    <div style="display:flex;gap:11px;padding-left:{{ line.pad }};animation:lineIn .18s ease-out;">
+                      <span style="color:#3a424d;flex:none;">{{ line.t }}</span>
+                      <span style="color:{{ line.color }};flex:none;width:14px;">{{ line.glyph }}</span>
+                      <span style="color:{{ line.textColor }};white-space:pre-wrap;word-break:break-word;">{{ line.text }}</span>
+                    </div>
+                  </sc-for>
+                  <div style="margin-top:5px;"><span style="display:inline-block;width:8px;height:14px;background:#f5a623;vertical-align:middle;animation:blink 1s step-end infinite;"></span></div>
+                </div>
+              </div>
+            </div>
+            </sc-if>
+
+          </div>
+        </div>
+
+        <!-- input -->
+        <div style="border-top:1px solid #1b212a;background:#0c0f14;padding:16px 30px 14px;flex:none;">
+          <div style="max-width:840px;margin:0 auto;">
+            <div style="display:flex;align-items:flex-end;gap:10px;background:#14181f;border:1px solid #232a33;border-radius:13px;padding:7px 7px 7px 16px;">
+              <textarea rows="1" value="{{ input }}" oninput="{{ onInput }}" onkeydown="{{ onKey }}" placeholder="Ask about production, performance, costs, or request a report…" style="flex:1;background:none;border:none;outline:none;color:#e6e9ee;font-size:14.5px;line-height:1.5;resize:none;padding:9px 0;max-height:120px;"></textarea>
+              <button onclick="{{ send }}" disabled="{{ sendDisabled }}" style="display:flex;align-items:center;gap:7px;border:none;border-radius:9px;padding:10px 16px;cursor:{{ sendCursor }};color:#1a1205;font-weight:600;font-size:13px;background:{{ sendBg }};opacity:{{ sendOpacity }};flex:none;">Send →</button>
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-top:9px;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#4a525e;">
+              <span>enter to send · shift+enter for newline</span>
+              <span>scope: {{ userAccessLabel }}</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- toast -->
+  <sc-if value="{{ hasToast }}" hint-placeholder-val="{{ false }}">
+  <div style="position:absolute;bottom:90px;left:50%;transform:translateX(-50%);background:#171c25;border:1px solid #2e3742;border-radius:9px;padding:11px 17px;display:flex;align-items:center;gap:9px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#cfd5de;box-shadow:0 14px 40px -16px #000;animation:toastIn .25s ease-out;z-index:50;">
+    <span style="color:#5fd08a;">↓</span>{{ toast }}
+  </div>
+  </sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: &quot;100%&quot;, &quot;height&quot;: &quot;100%&quot; },
+  &quot;startView&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;login&quot;, &quot;app&quot;], &quot;default&quot;: &quot;login&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;traceSpeed&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;Fast&quot;, &quot;Normal&quot;, &quot;Slow&quot;], &quot;default&quot;: &quot;Normal&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;showPlantsRail&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot; }
+}">
+class Component extends DCLogic {
+  companies = {
+    helios: { name:'Helios Renewables', cid:'helios', zone:'CAISO-SP15', plants:[
+      { id:'C1-001', cap:'4.2 MW', status:'online',   out:'3.10 MW', pr:'94%', mtd:1842394 },
+      { id:'C1-002', cap:'4.2 MW', status:'degraded', out:'2.41 MW', pr:'78%', mtd:1206800 },
+      { id:'C1-003', cap:'6.0 MW', status:'online',   out:'4.88 MW', pr:'96%', mtd:2954120 },
+    ]},
+    aurora: { name:'Aurora Grid Energy', cid:'aurora', zone:'CAISO-NP15', plants:[
+      { id:'AG-101', cap:'5.5 MW', status:'online',  out:'4.62 MW', pr:'95%', mtd:2410500 },
+      { id:'AG-102', cap:'5.5 MW', status:'online',  out:'4.40 MW', pr:'93%', mtd:2298900 },
+      { id:'AG-103', cap:'8.0 MW', status:'offline', out:'0.00 MW', pr:'—',   mtd:412000 },
+    ]},
+  };
+
+  users = [
+    { id:'mo', name:'Maria Okonkwo', initials:'MO', email:'m.okonkwo@heliosrenew.com', company:'helios', companyName:'Helios Renewables', role:'admin',    access:'energy+financial' },
+    { id:'dr', name:'Dan Reyes',     initials:'DR', email:'d.reyes@heliosrenew.com',   company:'helios', companyName:'Helios Renewables', role:'operator', access:'energy' },
+    { id:'pn', name:'Priya Nair',    initials:'PN', email:'p.nair@auroragrid.io',      company:'aurora', companyName:'Aurora Grid Energy', role:'admin',    access:'energy+financial' },
+    { id:'tb', name:'Tomás Berg',    initials:'TB', email:'t.berg@auroragrid.io',      company:'aurora', companyName:'Aurora Grid Energy', role:'operator', access:'energy' },
+  ];
+
+  fmtMeta = {
+    pdf:  { label:'PDF',  color:'#f0716a' },
+    docx: { label:'DOCX', color:'#5b8def' },
+    xlsx: { label:'XLSX', color:'#5fd08a' },
+  };
+
+  constructor(props) {
+    super(props);
+    const start = (props && props.startView) || 'login';
+    this.state = {
+      view: start,
+      user: start === 'app' ? this.users[0] : null,
+      messages: [], running: false, trace: [], input: '', toast: '',
+    };
+    this._timers = [];
+  }
+
+  componentWillUnmount() { this.clearTimers(); clearTimeout(this._toast); }
+
+  componentDidUpdate() {
+    if (this._scrollNext) { this._scrollNext = false; if (this._scroll) this._scroll.scrollTop = this._scroll.scrollHeight; }
+  }
+
+  clearTimers() { (this._timers || []).forEach(clearTimeout); this._timers = []; clearInterval(this._tick); }
+
+  plantsFor() { const c = this.state.user ? this.state.user.company : 'helios'; return this.companies[c].plants; }
+
+  nf(n) { return n.toLocaleString('en-US'); }
+
+  fmtT(ms) { const d = new Date(ms); const p = (n, l) => String(n).padStart(l || 2, '0'); return p(d.getHours()) + ':' + p(d.getMinutes()) + ':' + p(d.getSeconds()) + '.' + p(d.getMilliseconds(), 3); }
+
+  stamp(raw) {
+    const base = Date.now(); let cum = 0;
+    return raw.map(r => { cum += r[0]; return { after: r[0], t: this.fmtT(base + cum), kind: r[1], text: r[2], indent: r[3] || 0 }; });
+  }
+
+  finish(raw, completeAfter, fin, toolCount) {
+    const sum = raw.reduce((a, s) => a + s[0], 0) + completeAfter;
+    const secs = (sum / 1000).toFixed(1);
+    raw.push([completeAfter, 'ok', 'complete · ' + toolCount + ' tool_calls · ' + secs + 's', 0]);
+    return { steps: this.stamp(raw), traceTime: secs + 's' };
+  }
+
+  mapLine(l) {
+    const M = {
+      info:   { c:'#6b7480', t:'#aeb6c2' },
+      tool:   { c:'#f5a623', t:'#f5c06b' },
+      query:  { c:'#3a424d', t:'#6b7480' },
+      result: { c:'#5fd08a', t:'#86c7a4' },
+      ok:     { c:'#5fd08a', t:'#86c7a4' },
+      deny:   { c:'#f0716a', t:'#f0a09a' },
+      warn:   { c:'#f5a623', t:'#f5c06b' },
+    }[l.kind] || { c:'#6b7480', t:'#aeb6c2' };
+    const G = { info:'▸', tool:'▸', query:'└─', result:'└─', ok:'✓', deny:'✕', warn:'!' }[l.kind] || '·';
+    return { t: l.t, glyph: G, color: M.c, textColor: M.t, text: l.text, pad: ((l.indent || 0) * 18) + 'px' };
+  }
+
+  // ---- runs ----
+  buildRun(q) {
+    const ql = q.toLowerCase();
+    if (/underperform|under-?perform|\bwhy\b|drop|fault|trip|offline|down\b|decline|incident/.test(ql)) return this.diagnosticRun();
+    if (/revenue|report|portfolio|all my plant|performance ratio|across all|fleet|whole/.test(ql)) return this.portfolioRun();
+    return this.productionRun();
+  }
+
+  productionRun() {
+    const u = this.state.user, fin = u.access === 'energy+financial';
+    const co = this.companies[u.company], plants = co.plants, P = plants[0];
+    const pid = P.id, price = 48.20, nf = n => this.nf(n);
+    const daily = []; let total = 0, peak = { d:1, k:0 };
+    for (let i = 1; i <= 18; i++) {
+      let k = 100000 + Math.round(Math.sin(i * 1.25) * 8500) + (i % 6 === 0 ? -12000 : 0);
+      if (i === 11) k = 121400;
+      daily.push(['2026-06-' + String(i).padStart(2, '0'), k]);
+      total += k; if (k > peak.k) peak = { d:i, k };
+    }
+    const value = Math.round(total / 1000 * price);
+    const raw = [
+      [0,   'info',  'session.init  plant=' + pid + '  user=' + u.email, 0],
+      [220, 'info',  'parse_request  intent=production_summary' + (fin ? '+price_comparison' : ''), 0],
+      [300, 'tool',  'query_generation_db', 0],
+      [180, 'query', "SELECT day, SUM(kwh) FROM generation WHERE plant_id='" + pid + "' AND month='2026-06' GROUP BY day", 1],
+      [540, 'result', '18 rows · ' + nf(total) + ' kWh MTD', 1],
+      [240, 'tool',  'fetch_plant_metadata', 0],
+      [160, 'query', 'GET /plants/' + pid + ' → capacity=' + P.cap + ' zone=' + co.zone, 1],
+      [300, 'result', 'ok · 1 record', 1],
+    ];
+    if (fin) {
+      raw.push([280, 'tool',  'fetch_market_prices  src=CAISO_dayahead', 0]);
+      raw.push([160, 'query', "SELECT interval, lmp FROM market_prices WHERE zone='" + co.zone.split('-')[1] + "' AND month='2026-06'", 1]);
+      raw.push([560, 'result', '720 intervals · avg $' + price.toFixed(2) + '/MWh', 1]);
+    } else {
+      raw.push([320, 'deny', 'fetch_market_prices  BLOCKED · access=energy (financial scope not granted)', 0]);
+    }
+    raw.push([300, 'info', fin ? 'compute revenue_estimate · plan_variance' : 'compute plan_variance', 0]);
+    raw.push([360, 'info', 'render_report  formats=' + (fin ? 'pdf,docx,xlsx' : 'pdf,xlsx'), 0]);
+    const { steps, traceTime } = this.finish(raw, 420, fin, fin ? 5 : 4);
+
+    const answer = fin
+      ? 'Plant ' + pid + ' generated ' + nf(total) + ' kWh month-to-date in June 2026 — roughly 9.4% above its trailing three-month average. Valued at the ' + co.zone + ' day-ahead average of $' + price.toFixed(2) + '/MWh, that output represents an estimated $' + nf(value) + ' in market revenue. Peak single-day yield was ' + nf(peak.k) + ' kWh on June ' + peak.d + '. The full daily breakdown is attached below.'
+      : 'Plant ' + pid + ' generated ' + nf(total) + ' kWh month-to-date in June 2026 — roughly 9.4% above its trailing three-month average, with a peak single-day yield of ' + nf(peak.k) + ' kWh on June ' + peak.d + '.';
+    const metrics = fin
+      ? [ { label:'MTD output', value:(total/1e6).toFixed(2)+'M kWh', color:'#e6e9ee' },
+          { label:'vs 3-mo avg', value:'+9.4%', color:'#5fd08a' },
+          { label:'Est. revenue', value:'$'+nf(value), color:'#f5a623' },
+          { label:'Peak day', value:(peak.k/1000).toFixed(1)+' MWh', color:'#e6e9ee' } ]
+      : [ { label:'MTD output', value:(total/1e6).toFixed(2)+'M kWh', color:'#e6e9ee' },
+          { label:'vs 3-mo avg', value:'+9.4%', color:'#5fd08a' },
+          { label:'Peak day', value:(peak.k/1000).toFixed(1)+' MWh', color:'#e6e9ee' } ];
+    const notice = fin ? '' : 'Market-price comparison was withheld. Your access level (energy) does not include financial data — ask a ' + u.companyName + ' admin to enable energy+financial access for revenue analysis.';
+    const report = fin
+      ? { title: pid + ' · June 2026 Production & Market Analysis', slug: pid + '_2026-06_production_market', meta: '18 daily records · market-valued · 3 pages', formats:['pdf','docx','xlsx'],
+          columns:['date','kwh','price_usd_mwh','market_value_usd'], rows: daily.map(r => [r[0], r[1], price.toFixed(2), Math.round(r[1]/1000*price)]),
+          summary: pid + ' — June 2026 MTD\nTotal output: ' + nf(total) + ' kWh\nAvg price (' + co.zone + ' day-ahead): $' + price.toFixed(2) + '/MWh\nEstimated market revenue: $' + nf(value) + '\nPeak day: June ' + peak.d + ' (' + nf(peak.k) + ' kWh)' }
+      : { title: pid + ' · June 2026 Production Summary', slug: pid + '_2026-06_production', meta: '18 daily records · 2 pages', formats:['pdf','xlsx'],
+          columns:['date','kwh'], rows: daily,
+          summary: pid + ' — June 2026 MTD\nTotal output: ' + nf(total) + ' kWh\nPeak day: June ' + peak.d + ' (' + nf(peak.k) + ' kWh)\nFinancial data withheld (access=energy)' };
+    return { steps, traceTime, answer, notice, metrics, report };
+  }
+
+  diagnosticRun() {
+    const u = this.state.user, fin = u.access === 'energy+financial';
+    const co = this.companies[u.company], plants = co.plants;
+    const P = plants.find(x => x.status !== 'online') || plants[1];
+    const pid = P.id, nf = n => this.nf(n);
+    const rows = [];
+    for (let h = 0; h < 24; h++) {
+      let k = 0; if (h >= 6 && h <= 19) { const x = (h - 6) / 13; k = Math.round(Math.sin(x * Math.PI) * 3000); }
+      let status = 'ok'; if (h >= 11 && h <= 14) { k = Math.round(k * 0.1); status = 'FAULT'; }
+      rows.push([String(h).padStart(2, '0') + ':00', k, status]);
+    }
+    const raw = [
+      [0,   'info',  'session.init  plant=' + pid + '  user=' + u.email, 0],
+      [220, 'info',  'parse_request  intent=anomaly_diagnosis  window=2026-06-08', 0],
+      [300, 'tool',  'query_generation_db', 0],
+      [170, 'query', "SELECT hour, kwh FROM generation WHERE plant_id='" + pid + "' AND day='2026-06-08'", 1],
+      [500, 'result', '24 rows · output gap 11:00–15:00 (−23%)', 1],
+      [260, 'tool',  'query_inverter_events', 0],
+      [160, 'query', "SELECT ts, code, msg FROM inverter_events WHERE plant_id='" + pid + "' AND day='2026-06-08'", 1],
+      [520, 'result', '3 events · block_B fault code=IGBT-OT 11:20→14:50', 1],
+      [240, 'tool',  'fetch_weather', 0],
+      [160, 'query', 'GET /weather/' + pid + '?day=2026-06-08 → ambient_max=41°C irradiance=nominal', 1],
+      [420, 'result', 'ok · irradiance nominal · heat advisory active', 1],
+    ];
+    if (fin) {
+      raw.push([260, 'tool',  'estimate_lost_revenue', 0]);
+      raw.push([150, 'query', '14200 kWh × $48.20/MWh', 1]);
+      raw.push([320, 'result', '≈ $684 estimated loss', 1]);
+    } else {
+      raw.push([300, 'deny', 'estimate_lost_revenue  BLOCKED · access=energy (financial scope not granted)', 0]);
+    }
+    raw.push([320, 'info', 'render_report  formats=' + (fin ? 'pdf,docx' : 'pdf'), 0]);
+    const { steps, traceTime } = this.finish(raw, 420, fin, fin ? 4 : 3);
+
+    const answer = pid + "'s yield fell about 23% on June 8. Root cause: a 3.5-hour fault on inverter block B (code IGBT-OT, 11:20–14:50) during a 41°C heat peak. Irradiance was nominal that day, so this was equipment-driven, not weather. Estimated lost production was 14,200 kWh" + (fin ? ' (≈ $684 at day-ahead prices)' : '') + '. The inverter auto-recovered at 14:50 — recommend a thermal inspection of block B cooling before the next heat event.';
+    const metrics = fin
+      ? [ { label:'Yield loss', value:'−23%', color:'#f0716a' },
+          { label:'Downtime', value:'3.5 h', color:'#e6e9ee' },
+          { label:'Lost output', value:'14.2 MWh', color:'#e6e9ee' },
+          { label:'Est. loss', value:'$684', color:'#f5a623' } ]
+      : [ { label:'Yield loss', value:'−23%', color:'#f0716a' },
+          { label:'Downtime', value:'3.5 h', color:'#e6e9ee' },
+          { label:'Lost output', value:'14.2 MWh', color:'#e6e9ee' } ];
+    const notice = fin ? '' : 'Estimated revenue impact was withheld — your access level (energy) does not include financial data.';
+    const report = { title: pid + ' · Underperformance Incident — June 8', slug: pid + '_2026-06-08_incident', meta: '24 hourly records · root-cause', formats: fin ? ['pdf','docx'] : ['pdf'],
+      columns:['hour','kwh','status'], rows,
+      summary: pid + ' — Incident June 8, 2026\nRoot cause: inverter block_B fault (IGBT-OT), 11:20–14:50\nYield loss: ~23% · downtime 3.5h · lost ~14,200 kWh' + (fin ? '\nEstimated revenue loss: ~$684' : '') + '\nRecommendation: thermal inspection of block B cooling' };
+    return { steps, traceTime, answer, notice, metrics, report };
+  }
+
+  portfolioRun() {
+    const u = this.state.user, fin = u.access === 'energy+financial';
+    const co = this.companies[u.company], plants = co.plants;
+    const price = 48.20, nf = n => this.nf(n);
+    const total = plants.reduce((a, p) => a + p.mtd, 0);
+    const value = Math.round(total / 1000 * price);
+    const flagged = (plants.find(p => p.status !== 'online') || plants[1]).id;
+    const raw = [
+      [0,   'info',  'session.init  scope=portfolio  user=' + u.email, 0],
+      [220, 'info',  'parse_request  intent=portfolio_report  plants=' + plants.length, 0],
+      [300, 'tool',  'query_generation_db', 0],
+      [180, 'query', "SELECT plant_id, SUM(kwh) FROM generation WHERE company='" + co.cid + "' AND month='2026-06' GROUP BY plant_id", 1],
+      [540, 'result', plants.length + ' plants · ' + nf(total) + ' kWh MTD', 1],
+      [240, 'tool',  'compute_performance_ratio', 0],
+      [420, 'result', 'avg PR 90% · 1 plant flagged (' + flagged + ')', 1],
+    ];
+    if (fin) {
+      raw.push([280, 'tool',  'fetch_market_prices  src=CAISO_dayahead', 0]);
+      raw.push([520, 'result', 'avg $' + price.toFixed(2) + '/MWh · est. value $' + nf(value), 1]);
+    } else {
+      raw.push([300, 'deny', 'fetch_market_prices  BLOCKED · access=energy (financial scope not granted)', 0]);
+    }
+    raw.push([360, 'info', 'render_report  formats=' + (fin ? 'pdf,docx,xlsx' : 'pdf,xlsx'), 0]);
+    const { steps, traceTime } = this.finish(raw, 420, fin, fin ? 4 : 3);
+
+    const answer = fin
+      ? 'Across your ' + plants.length + ' ' + u.companyName + ' plants, total month-to-date generation is ' + nf(total) + ' kWh, worth an estimated $' + nf(value) + ' at the ' + co.zone + ' day-ahead average. Fleet performance ratio averages 90%, but ' + flagged + ' is flagged below target and is driving most of the shortfall. Per-plant figures are in the report.'
+      : 'Across your ' + plants.length + ' ' + u.companyName + ' plants, total month-to-date generation is ' + nf(total) + ' kWh. Fleet performance ratio averages 90%, but ' + flagged + ' is flagged below target and is driving most of the shortfall. Per-plant production is in the report.';
+    const metrics = fin
+      ? [ { label:'Plants', value:String(plants.length), color:'#e6e9ee' },
+          { label:'MTD output', value:(total/1e6).toFixed(2)+'M kWh', color:'#e6e9ee' },
+          { label:'Est. value', value:'$'+nf(value), color:'#f5a623' },
+          { label:'Avg PR', value:'90%', color:'#5fd08a' } ]
+      : [ { label:'Plants', value:String(plants.length), color:'#e6e9ee' },
+          { label:'MTD output', value:(total/1e6).toFixed(2)+'M kWh', color:'#e6e9ee' },
+          { label:'Avg PR', value:'90%', color:'#5fd08a' } ];
+    const notice = fin ? '' : 'Market valuation was withheld — your access level (energy) does not include financial data.';
+    const report = fin
+      ? { title: u.companyName + ' Portfolio · June 2026', slug: co.cid + '_portfolio_2026-06', meta: plants.length + ' plants · revenue & production', formats:['pdf','docx','xlsx'],
+          columns:['plant','kwh','price_usd_mwh','value_usd'], rows: plants.map(p => [p.id, p.mtd, price.toFixed(2), Math.round(p.mtd/1000*price)]),
+          summary: u.companyName + ' Portfolio — June 2026 MTD\nTotal output: ' + nf(total) + ' kWh\nEstimated value: $' + nf(value) + '\nFlagged: ' + flagged }
+      : { title: u.companyName + ' Portfolio · June 2026', slug: co.cid + '_portfolio_2026-06', meta: plants.length + ' plants · production', formats:['pdf','xlsx'],
+          columns:['plant','kwh'], rows: plants.map(p => [p.id, p.mtd]),
+          summary: u.companyName + ' Portfolio — June 2026 MTD\nTotal output: ' + nf(total) + ' kWh\nFlagged: ' + flagged + '\nFinancial data withheld (access=energy)' };
+    return { steps, traceTime, answer, notice, metrics, report };
+  }
+
+  // ---- actions ----
+  pick(u) { this.clearTimers(); this._scrollNext = true; this.setState({ view:'app', user:u, messages:[], running:false, trace:[], input:'' }); }
+  switchUser() { this.clearTimers(); this.setState({ view:'login', user:null, messages:[], running:false, trace:[], input:'' }); }
+  toggleTrace(i) { this.setState(st => ({ messages: st.messages.map((m, idx) => idx === i ? Object.assign({}, m, { traceOpen: !m.traceOpen }) : m) })); }
+
+  send() {
+    const q = (this.state.input || '').trim();
+    if (!q || this.state.running) return;
+    const plan = this.buildRun(q);
+    const mult = ({ Fast:0.55, Normal:1, Slow:1.7 })[(this.props && this.props.traceSpeed) || 'Normal'] || 1;
+    this._scrollNext = true;
+    this.setState(st => ({ messages: st.messages.concat([{ role:'user', text:q }]), input:'', running:true, trace:[] }));
+    this._start = Date.now();
+    this.clearTimers();
+    this._tick = setInterval(() => this.forceUpdate(), 100);
+    let acc = 0;
+    plan.steps.forEach(s => {
+      acc += s.after * mult;
+      this._timers.push(setTimeout(() => { this._scrollNext = true; this.setState(st => ({ trace: st.trace.concat([s]) })); }, acc));
+    });
+    this._timers.push(setTimeout(() => {
+      clearInterval(this._tick); this._scrollNext = true;
+      this.setState(st => ({
+        messages: st.messages.concat([{ role:'agent', trace: st.trace, traceTime: plan.traceTime, traceOpen:false, answer: plan.answer, notice: plan.notice, metrics: plan.metrics, report: plan.report }]),
+        running:false, trace:[],
+      }));
+    }, acc + 500 * mult));
+  }
+
+  download(report, fmt) {
+    let content, name, type;
+    if (fmt === 'xlsx') {
+      content = [report.columns.join(',')].concat(report.rows.map(r => r.join(','))).join('\n');
+      name = report.slug + '.csv'; type = 'text/csv';
+    } else {
+      const table = [report.columns.join('\t')].concat(report.rows.map(r => r.join('\t'))).join('\n');
+      content = report.title + '\n' + '='.repeat(report.title.length) + '\n\n' + report.summary + '\n\n' + table + '\n';
+      name = report.slug + (fmt === 'pdf' ? '.pdf.txt' : '.docx.txt'); type = 'text/plain';
+    }
+    const blob = new Blob([content], { type });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href = url; a.download = name;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 3000);
+    this.setState({ toast: 'Downloaded ' + name });
+    clearTimeout(this._toast);
+    this._toast = setTimeout(() => this.setState({ toast:'' }), 2800);
+  }
+
+  renderVals() {
+    const accClr = a => a === 'energy+financial'
+      ? { color:'#f5a623', bg:'#f5a6231a', border:'#f5a62340' }
+      : { color:'#8fb8a0', bg:'#5fd08a14', border:'#5fd08a33' };
+    const accLabel = a => a === 'energy+financial' ? 'energy + financial' : 'energy';
+
+    const companyGroups = ['helios', 'aurora'].map(cid => ({
+      name: this.companies[cid].name,
+      users: this.users.filter(u => u.company === cid).map(u => {
+        const c = accClr(u.access);
+        return Object.assign({}, u, {
+          roleLabel: u.role.toUpperCase(), accessLabel: accLabel(u.access),
+          accessColor: c.color, accessBg: c.bg, accessBorder: c.border,
+          pick: () => this.pick(u),
+        });
+      }),
+    }));
+
+    const u = this.state.user || {};
+    const uc = accClr(u.access);
+    const plants = this.plantsFor().map(p => Object.assign({}, p, {
+      statusColor: p.status === 'online' ? '#5fd08a' : (p.status === 'degraded' ? '#f5a623' : '#f0716a'),
+    }));
+
+    const pid = this.plantsFor()[0].id;
+    const pid2 = (this.plantsFor().find(p => p.status !== 'online') || this.plantsFor()[1]).id;
+    const sugTexts = [
+      "What's my total energy production for " + pid + " this month, and how does it compare to market prices?",
+      'Why did ' + pid2 + ' underperform recently?',
+      'Generate a June revenue report for my whole portfolio.',
+      'Show the performance ratio across all my plants.',
+    ];
+    const suggestions = sugTexts.map(t => ({ text: t, ask: () => this.setState({ input: t }, () => this.send()) }));
+
+    const msgs = this.state.messages.map((m, i) => {
+      if (m.role === 'user') return { isUser:true, isAgent:false, text:m.text };
+      const rep = m.report ? Object.assign({}, m.report, {
+        fmts: m.report.formats.map(f => Object.assign({}, this.fmtMeta[f], { onClick: () => this.download(m.report, f) })),
+        onDownload: () => this.download(m.report, m.report.formats.indexOf('xlsx') >= 0 ? 'xlsx' : m.report.formats[0]),
+      }) : null;
+      return {
+        isUser:false, isAgent:true, answer:m.answer,
+        hasNotice: !!m.notice, notice: m.notice || '',
+        hasMetrics: (m.metrics || []).length > 0, metrics: m.metrics || [],
+        hasReport: !!m.report, report: rep,
+        trace: (m.trace || []).map(l => this.mapLine(l)), traceCount: (m.trace || []).length,
+        traceTime: m.traceTime || '', traceOpen: !!m.traceOpen, caret: m.traceOpen ? ' ▾' : ' ▸',
+        toggle: () => this.toggleTrace(i),
+      };
+    });
+
+    const canSend = !this.state.running && (this.state.input || '').trim().length > 0;
+
+    return {
+      isLogin: this.state.view === 'login',
+      isApp: this.state.view === 'app',
+      companyGroups, plants,
+      companyName: u.companyName || '', userEmail: u.email || '', userInitials: u.initials || '',
+      userRole: (u.role || '').toUpperCase(), userAccessLabel: accLabel(u.access),
+      userAccessColor: uc.color, userAccessBg: uc.bg, userAccessBorder: uc.border,
+      showRail: this.props.showPlantsRail !== false,
+      railCols: this.props.showPlantsRail !== false ? '264px minmax(0,1fr)' : '0px minmax(0,1fr)',
+      showEmpty: this.state.messages.length === 0 && !this.state.running,
+      msgs,
+      running: this.state.running,
+      liveTrace: this.state.trace.map(l => this.mapLine(l)),
+      liveElapsed: (this.state.running && this._start) ? ((Date.now() - this._start) / 1000).toFixed(1) + 's' : '0.0s',
+      suggestions,
+      input: this.state.input,
+      onInput: e => this.setState({ input: e.target.value }),
+      onKey: e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); this.send(); } },
+      send: () => this.send(),
+      switchUser: () => this.switchUser(),
+      setScrollRef: el => { this._scroll = el; },
+      sendDisabled: !canSend,
+      sendBg: canSend ? '#f5a623' : '#2a323c',
+      sendOpacity: canSend ? '1' : '0.55',
+      sendCursor: canSend ? 'pointer' : 'not-allowed',
+      hasToast: !!this.state.toast, toast: this.state.toast,
+    };
+  }
+}
+</script>
+
+
+</body></html>

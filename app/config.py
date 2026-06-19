@@ -23,5 +23,9 @@ class Settings(BaseSettings):
     # Where generated documents (PDF/Word/Excel) are written before download
     OUTPUT_DIR: str = "/tmp/agent_outputs"
 
+    # Shared "demo access key" gating /api/* — set in .env. Empty disables
+    # the gate (handy for local hacking without the splash screen).
+    DEMO_ACCESS_KEY: str = ""
+
 
 settings = Settings()

@@ -89,8 +89,16 @@ def make_run_sql_tool(db_session):
                 columns = [desc[0] for desc in cur.description] if cur.description else []
                 rows = cur.fetchall()
         except Exception as e:
+            # CRITICAL: a failed query leaves the connection in an aborted
+            # transaction state in PostgreSQL — every subsequent query on
+            # this connection would fail too, until rolled back. Since this
+            # connection is reused for the rest of the agent run (and
+            # possibly multiple tool calls), we must roll back here so the
+            # agent can keep working after a bad query, instead of every
+            # later query silently failing with "current transaction is
+            # aborted."
+            db_session.rollback()
             return f"Query error: {e}"
-
         if not rows:
             return "Query returned no rows."
 

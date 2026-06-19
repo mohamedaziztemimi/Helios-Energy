@@ -24,9 +24,9 @@ What this does NOT protect against (see limitations note):
 import subprocess
 import tempfile
 import os
-
+import sys
 from langchain_core.tools import tool
-
+PYTHON_EXECUTABLE = sys.executable
 TIMEOUT_SECONDS = 20
 MAX_OUTPUT_CHARS = 4000
 
@@ -48,7 +48,7 @@ def run_python(code: str) -> str:
     with tempfile.TemporaryDirectory() as scratch_dir:
         try:
             result = subprocess.run(
-                ["python3", "-I", "-c", code],
+                [PYTHON_EXECUTABLE, "-I", "-c", code],
                 capture_output=True,
                 text=True,
                 timeout=TIMEOUT_SECONDS,

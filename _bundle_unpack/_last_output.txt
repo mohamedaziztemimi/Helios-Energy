@@ -1,0 +1,6 @@
+[PatchToolCallsMiddleware.before_agent] None
+[model] {'messages': [AIMessage(content='', additional_kwargs={}, response_metadata={'finish_reason': 'tool_calls', 'model_name': 'gpt-5-2025-08-07', 'service_tier': 'default', 'model_provider': 'openai'}, id='lc_run--019ee1dc-2b96-7551-8757-bf828a58a22f', tool_calls=[{'name': 'generate_pdf', 'args': {'titl
+[TodoListMiddleware.after_model] None
+[tools] {'messages': [ToolMessage(content='/tmp/agent_outputs\\3e135bdd-64a3-4d72-b1ce-a1761d5f35ac\\c1-001_quick_report_f4cd151f.pdf', name='generate_pdf', id='7e2d3428-4fe7-4434-ab49-8a3f66dddb9d', tool_call_id='call_RbP6w3F2wzIe1uhwVTu6llIK')]}
+[model] {'messages': [AIMessage(content='Here is your PDF:\n- /tmp/agent_outputs/3e135bdd-64a3-4d72-b1ce-a1761d5f35ac/c1-001_quick_report_f4cd151f.pdf', additional_kwargs={}, response_metadata={'finish_reason': 'stop', 'model_name': 'gpt-5-2025-08-07', 'service_tier': 'default', 'model_provider': 'openai'},
+[TodoListMiddleware.after_model] None

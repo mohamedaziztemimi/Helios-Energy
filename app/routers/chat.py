@@ -124,7 +124,30 @@ def _update_run(conn, run_id: str, status: str, output: str | None, error: str |
             )
     conn.commit()
 
+@router.get("/api/runs")
+def list_runs(user: dict = Depends(get_current_user)):
+    """
+    Lists the current user's past agent runs (most recent first), so the
+    frontend can show conversation history after a fresh page load —
+    not just mid-run continuity, which /api/runs/{run_id} already covers.
+    RLS on agent_runs (user_id = current session's user) means this can
+    never return another user's history.
+    """
+    with get_scoped_connection(user["company_id"], user["access_scope"], user["id"]) as conn:
+        with conn.cursor() as cur:
+            cur.execute(
+                "SELECT id, session_id, status, input, output, created_at, updated_at "
+                "FROM agent_runs ORDER BY created_at DESC LIMIT 50"
+            )
+            rows = cur.fetchall()
 
+    return [
+        {
+            "id": r[0], "session_id": r[1], "status": r[2], "input": r[3],
+            "output": r[4], "created_at": r[5].isoformat(), "updated_at": r[6].isoformat(),
+        }
+        for r in rows
+    ]
 @router.get("/api/runs/{run_id}")
 def get_run(run_id: str, user: dict = Depends(get_current_user)):
     """
