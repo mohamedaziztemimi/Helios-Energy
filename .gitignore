@@ -58,3 +58,6 @@ dmypy.json
 
 # Jupyter
 .ipynb_checkpoints/
+
+#Data folder
+data/
