@@ -111,6 +111,15 @@
     },
     forceUpdate: function () { this.render(); },
 
+    // Surgically update just the live elapsed timer's text content
+    // without triggering a full innerHTML rebuild. Avoids re-applying
+    // CSS animations to existing message/trace elements on every tick.
+    updateElapsedDom: function () {
+      if (!this.state.running || !this._start) return;
+      const el = document.getElementById('liveElapsed');
+      if (el) el.textContent = ((Date.now() - this._start) / 1000).toFixed(1) + 's';
+    },
+
     didMount: function () {
       if (this._restorePending) {
         this._restoreFromSession(this._restorePending);
@@ -321,7 +330,7 @@
       this._finalizedRunId = null;
       this._activeBubbleId = null;
       this.clearTimers();
-      this._tick = setInterval(function () { self.forceUpdate(); }, 100);
+      this._tick = setInterval(function () { self.updateElapsedDom(); }, 200);
 
       fetch(API_BASE_URL + '/api/chat', {
         method: 'POST',
@@ -396,7 +405,7 @@
         if (ft) self.showOrUpdateBubble(ft, output);
         if (data.status === 'completed' || data.status === 'failed') {
           try { es.close(); } catch (e) {}
-          self.finishRun(data.status, output, data.error, data.final_text);
+          self.finalizeFromRest(runId, userId, data.status, output, data.error, data.final_text);
         }
       };
       es.onerror = function () {
@@ -428,7 +437,7 @@
             const ft = (typeof data.final_text === 'string' && data.final_text.trim()) ? data.final_text.trim() : '';
             if (ft) self.showOrUpdateBubble(ft, output);
             if (data.status === 'completed' || data.status === 'failed') {
-              self.finishRun(data.status, output, data.error, data.final_text);
+              self.finalizeFromRest(runId, userId, data.status, output, data.error, data.final_text);
             } else {
               const t = setTimeout(tick, 1500);
               self._timers.push(t);
@@ -505,6 +514,36 @@
           self.setState({ toast: 'Download failed — ' + (err.message || err) });
           clearTimeout(self._toast);
           self._toast = setTimeout(function () { self.setState({ toast: '' }); }, 4500);
+        });
+    },
+
+    // When a run reaches a terminal status, the SSE/poll frame we're
+    // holding may not include final_text yet. The authoritative source is
+    // GET /api/runs/{id}, which always carries the agent's clean natural-
+    // language answer. Refetch it once before finalizing the chat bubble
+    // so the user sees "2 plants" instead of the "Run completed" fallback.
+    finalizeFromRest: function (runId, userId, status, output, error, finalTextFromFrame) {
+      const self = this;
+      if (this._finalizedRunId && this._finalizedRunId === this._runId) return;
+      const haveFt = (typeof finalTextFromFrame === 'string' && finalTextFromFrame.trim());
+      if (haveFt) {
+        this.finishRun(status, output, error, finalTextFromFrame);
+        return;
+      }
+      fetch(API_BASE_URL + '/api/runs/' + encodeURIComponent(runId), {
+        headers: this.apiHeaders(userId),
+      })
+        .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+        .then(function (run) {
+          self.finishRun(
+            run.status || status,
+            run.output || output,
+            run.error || error,
+            run.final_text
+          );
+        })
+        .catch(function () {
+          self.finishRun(status, output, error, '');
         });
     },
 
@@ -642,7 +681,7 @@
           self._scrollNext = true;
           self.setState(newState);
           if (newestIsLive) {
-            self._tick = setInterval(function () { self.forceUpdate(); }, 100);
+            self._tick = setInterval(function () { self.updateElapsedDom(); }, 200);
             self.streamRun(newest.id, userId, (newest.output || '').length);
           }
         })
@@ -933,7 +972,7 @@
 
       const msgs = v.msgs.map(function (m) {
         if (m.isUser) {
-          return '<div style="display:flex;justify-content:flex-end;animation:msgIn .25s ease-out;">'
+          return '<div style="display:flex;justify-content:flex-end;">'
             + '<div style="max-width:80%;background:#1b222c;border:1px solid #2a323c;border-radius:14px 14px 4px 14px;padding:12px 16px;font-size:14.5px;line-height:1.55;color:#e6e9ee;white-space:pre-wrap;">'
             + esc(m.text)
             + '</div>'
@@ -972,7 +1011,7 @@
             + cards
             + '</div>';
         }
-        return '<div style="animation:msgIn .25s ease-out;">'
+        return '<div>'
           + '<div style="display:flex;align-items:center;gap:8px;margin-bottom:11px;">'
           +   '<span style="width:7px;height:7px;border-radius:50%;background:#f5a623;display:block;"></span>'
           +   '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:10.5px;letter-spacing:.16em;color:#8b94a3;text-transform:uppercase;">Analyst Agent</span>'
@@ -990,14 +1029,14 @@
       let liveTrace = '';
       if (v.running) {
         const liveLines = v.liveTrace.map(function (l) {
-          return '<div style="display:flex;gap:11px;padding-left:' + l.pad + ';animation:lineIn .18s ease-out;">'
+          return '<div style="display:flex;gap:11px;padding-left:' + l.pad + ';">'
             + '<span style="color:#3a424d;flex:none;">' + esc(l.t) + '</span>'
             + '<span style="color:' + l.color + ';flex:none;width:14px;">' + esc(l.glyph) + '</span>'
             + '<span style="color:' + l.textColor + ';white-space:pre-wrap;word-break:break-word;">' + esc(l.text) + '</span>'
             + '</div>';
         }).join('');
         liveTrace = ''
-          + '<div style="animation:msgIn .25s ease-out;">'
+          + '<div>'
           +   '<div style="display:flex;align-items:center;gap:8px;margin-bottom:11px;">'
           +     '<span style="width:7px;height:7px;border-radius:50%;background:#f5a623;display:block;"></span>'
           +     '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:10.5px;letter-spacing:.16em;color:#8b94a3;text-transform:uppercase;">Analyst Agent</span>'
@@ -1009,7 +1048,7 @@
           +         '<span style="font-size:10.5px;letter-spacing:.16em;color:#aeb6c2;text-transform:uppercase;">Agent Trace</span>'
           +         '<span style="font-size:10.5px;letter-spacing:.1em;color:#f5a623;text-transform:uppercase;">· running</span>'
           +       '</div>'
-          +       '<span style="font-size:11px;color:#5a6371;">' + esc(v.liveElapsed) + '</span>'
+          +       '<span id="liveElapsed" style="font-size:11px;color:#5a6371;">' + esc(v.liveElapsed) + '</span>'
           +     '</div>'
           +     '<div style="padding:12px 14px;font-size:12px;line-height:1.65;overflow-x:auto;">'
           +       liveLines
